@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="IndexCSS/style.css">
     <title>Bienvenidx</title>
-
+    
 </head>
+
 
 <body>
     <header>
 
         <!-- Pre = preformatted -->
-        <pre>
+        <pre ">
 
  ██▓     ██▓ ██▓     ██▓   ▓██   ██▓    ▒█████   ███▄    █  ██▓     ██▓ ███▄    █ ▓█████ 
 ▓██▒    ▓██▒▓██▒    ▓██▒    ▒██  ██▒   ▒██▒  ██▒ ██ ▀█   █ ▓██▒    ▓██▒ ██ ▀█   █ ▓█   ▀ 
@@ -26,11 +28,11 @@
                             ░ ░                                                          
         </pre>
 
-        <p> <i> Un sitio personal. En constante construcción</i></p>
+        <p class="subtitulo"> Un sitio personal. En constante construcción</p>
     </header>
 
     <main>
-        <section>
+        <section class="texto-index">
             <ul>
                 <li>
                     <h3>Personal</h3>
@@ -45,7 +47,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="texto-index">
             <ul>
                 <li>
                     <h3>Blog</h3>
@@ -53,14 +55,14 @@
                 <ol>
                     <li type="I">
                         <a href="/Blog/blog.html">Inicio</a>
-                        </li>
-                    <li type="I" style="pointer">Última entrada</li>
+                    </li>
+                    <li type="I">Última entrada</li>
                     <li type="I">Historial de entradas</li>
                 </ol>
             </ul>
         </section>
 
-        <section>
+        <section class="texto-index">
             <ul>
                 <li>
                     <h3>Lecturas</h3>
@@ -76,8 +78,24 @@
 
     </main>
     <footer>
-        Copyright LP 2025
+        <section>
+            Copyright LP 2025
+        </section>
+
+        <section align="right">
+            <button onclick="cambioDeModo()">
+                Modo darks
+            </button>
+        </section>
+
     </footer>
+
+    <script>
+        function cambioDeModo() {
+            var element = document.body;
+            element.classList.toggle("modo-dark");
+        }
+    </script>
 </body>
 
 </html>
