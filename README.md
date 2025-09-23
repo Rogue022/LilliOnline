@@ -6,3 +6,5 @@ El sitio está en constante construcción.
 Adelante. 
 
 == Quaestio Mihi Factus Sum ==
+
+==No cambies tu futuro. Cambia tu presente. ==
