@@ -28,19 +28,31 @@
                             ░ ░                                                          
         </pre>
 
-        <p class=" subtitulo"> Un espacio para la ingeniería, las lenguas y las reflexiones personales
+        <p class=" subtitulo"> Ingeniería, lenguas y reflexiones personales
         </p>
     </header>
 
     <main>
         <p class="tiempo" id="tiempo"></p>
         <script>
-            document.getElementById("tiempo").innerHTML = Date();
+            const date = new Date();            
+
+            const formatoDate = date.toLocaleString(
+                "es-US", {
+                    day:"numeric",
+                    month:"short",
+                    year:"numeric",
+                    hour:"numeric",
+                    minute:"2-digit"
+                }
+            );
+
+            document.getElementById("tiempo").innerHTML = formatoDate;
         </script>
 
         <hr class="primer_separador"> 
         <section class="texto-index">
-            <ul>
+            <ul>new Date(2025)
                 <li>
                     <h3>Sobre mí</h3>
                 </li>
@@ -82,7 +94,7 @@
                 </ol>
             </ul>
         </section>
-         
+
     </main>
     <footer>
         <section class="copyright">
@@ -102,7 +114,7 @@
             var element = document.body;
             element.classList.toggle("modo-dark");
         }
-        
+
     </script>
 </body>
 

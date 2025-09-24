@@ -30,7 +30,6 @@ pre{
 
 .subtitulo{
     font-size:1.8vw;
-    font-style: italic;
     font-family:Times New Roman, sans-serif;
     text-align: right;
 }
@@ -42,4 +41,5 @@ hr.primer_separador{
 
 p.tiempo{
     text-align: right;
+    font-size:1.2vw;
 }
