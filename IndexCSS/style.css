@@ -1,9 +1,10 @@
 body{
     padding: 25px;
-    background-color: rgb(240, 237, 238);
+    background-color: rgb(230, 220, 214);
     background-attachment: white;
     color: rgb(31, 13, 13);
     font-size: 13px;
+    
 }
 
 .modo-dark{
@@ -19,15 +20,22 @@ button{
 pre{
     font-size:1.5vw;
     margin: 35px;
+    text-align: center;
 }
 
 .texto-index{
     font-size:1.4vw;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Times New Roman, sans-serif;
 }
 
 .subtitulo{
-    font-size:2vw;
+    font-size:1.8vw;
     font-style: italic;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Times New Roman, sans-serif;
+    text-align: right;
+}
+
+hr.primer_separador{
+    border-top: 3px solid #bd7acd;
+    border-radius: 5px;
 }

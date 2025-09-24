@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="IndexCSS/style.css">
     <title>Bienvenidx</title>
-    
+
 </head>
 
 
@@ -28,17 +28,20 @@
                             ░ ░                                                          
         </pre>
 
-        <p class="subtitulo"> Un sitio personal. En constante construcción</p>
+        <p class=" subtitulo"> Un espacio para la ingeniería, las lenguas y las reflexiones personales
+        </p>
     </header>
 
     <main>
+        <p>timeStamp: <span id="time">-</span></p>
+        <hr class="primer_separador"> 
         <section class="texto-index">
             <ul>
                 <li>
-                    <h3>Personal</h3>
+                    <h3>Sobre mí</h3>
                 </li>
                 <ol>
-                    <li type="I">Acerca de mi</li>
+                    <li type="I">Bio</li>
                     <li type="I">Contacto</li>
                     <li type="I">Cursos</li>
                     <li type="I">Barra de progreso</li>
@@ -75,10 +78,10 @@
                 </ol>
             </ul>
         </section>
-
+         
     </main>
     <footer>
-        <section>
+        <section class="copyright">
             Copyright LP 2025
         </section>
 
@@ -95,6 +98,11 @@
             var element = document.body;
             element.classList.toggle("modo-dark");
         }
+        function getTime(event) {
+            const time = document.getElementById("time");
+            time.firstChild.nodeValue = event.timeStamp;
+        }
+        document.body.addEventListener("keypress", getTime);
     </script>
 </body>
 
