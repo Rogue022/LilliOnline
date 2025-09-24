@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../IndexCSS/style.css">
+    <title>Lecturas</title>
+
+</head>
+
+
+<body>
+    <header>
+
+        <pre ">
+░█░░░█▀▀░█▀▀░▀█▀░█░█░█▀▄░█▀█░█▀▀
+░█░░░█▀▀░█░░░░█░░█░█░█▀▄░█▀█░▀▀█
+░▀▀▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀░▀░▀░▀░▀▀▀
+
+        </pre>
+
+        <p class=" subtitulo"> Artículos, entradas de blog y libros que no se deberían de perder en el Internet
+        </p>
+    </header>
+
+    <main>
+        <p class="tiempo" id="tiempo"></p>
+        <script>
+            const date = new Date();
+
+            const formatoDate = date.toLocaleString(
+                "es-US", {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+                hour: "numeric",
+                minute: "2-digit"
+            }
+            );
+
+            document.getElementById("tiempo").innerHTML = "Hoy es: " + formatoDate;
+        </script>
+
+        <hr class="primer_separador"> 
+        <section class="texto-index">
+            <ul>
+                <li>
+                    <h3>Computación</h3>
+                </li>
+                <ol>
+                    <li type="I">
+                        <a href="https://journal.bsd.cafe/2025/07/28/the-bard-and-the-shell/">The Bard and The Shell</a> por Armin Hanish. 
+                        <ul>
+                            <li>
+                                Tutorial sobre cómo usar shell para buscar en un txt, en este caso, en una obra de Shakespeare
+                            </li>
+                        </ul>
+                    </li>
+                    <li type="I">
+                        <a href="https://theswissbay.ch/pdf/Gentoomen%20Library/Misc/Encyclopedia%20of%20Computer%20Science%20and%20Technology%20-%20%28Malestrom%29.pdf">Encyclopaedia of Computer Science and Technology</a> por Harry Henderson
+                        <ul>
+                            <li>
+                                Una vieja edición de una gran enciclopedia de términos relacionados con esta área. Muy útil incluso hoy día.
+                            </li>
+                        </ul>
+                    </li>
+                    <li type="I">
+                        <a href="https://theswissbay.ch/pdf/Gentoomen%20Library/Misc/Encyclopedia%20of%20Computer%20Science%20and%20Technology%20-%20%28Malestrom%29.pdf">how to stop feeling lost in tech: the wafflehouse method</a> por Yacine Mahdid
+                        <ul>
+                            <li>
+                                Una guía paso a paso sobre cómo saber lo que quieres en la industria.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </ul>
+        </section>
+
+        <section class="texto-index">
+            <ul>
+                <li>
+                    <h3>Literatura</h3>
+                </li>
+                <ol>
+                    <li type="I">
+                        <a href="https://www.publicbooks.org/our-golden-age-of-reading-online/">Our Golden Age of Reading Online</a> por Angelina Eimannsberger
+                    <ul>
+                            <li>
+                                Sobre cómo estamos experimentando las lecturas digitales hoy día y cómo está siendo ignorada por los intelectuales universitarios.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </ul>
+        </section>
+
+        <section class="texto-index">
+            <ul>
+                <li>
+                    <h3>Filosofía</h3>
+                </li>
+                <ol>
+                    <li type="I">
+                        <a href="https://www.noemamag.com/the-last-days-of-social-media//Blog/blog.html">The Last Days of Social Media</a> por James O'Sullivan
+                        <ul>
+                            <li>
+                                Ensayo sobre cómo desaparece la participación humana que una vez caracterizó las redes sociales.
+                            </li>
+                        </ul>
+                    </li>
+                    <li type="I">
+                        <a href="https://www.bostonreview.net/forum/the-responsibility-of-intellectuals-in-the-age-of-fascism-and-genocide/">The Responsibility of Intellectuals in the Age of Fascism and Genocide</a> por Robin D. G. Kelley
+                        <ul>
+                            <li>
+                                Ensayo sobre el papel de los intelectuales en las Universidades con respecto a la administración que esté en el país
+                            </li>
+                        </ul>
+                    </li>                    
+                </ol>
+            </ul>
+        </section>
+
+        <section class="texto-index">
+            <ul>
+                <li>
+                    <h3>Política</h3>
+                </li>
+                <ol>
+                    <li type="I">
+                        <a href="#">Una lectura futura</a>
+                    </li>
+                </ol>
+            </ul>
+        </section>
+        
+    </main>
+    <footer>
+        <section align="right">
+            <button onclick="cambioDeModo()" class="boton_dark" id="modo">
+                Oscuro
+            </button>
+             <button onclick="inicio()" class="boton_dark" id="regresar">
+                Inicio
+            </button>
+        </section>
+
+        <section class="copyright">
+            Copyright ©LP 2025
+        </section>
+    </footer>
+
+    <script>
+        function cambioDeModo() {
+            var element = document.body;
+
+            element.classList.toggle("modo-dark");
+
+            if (element.classList.toggle("modo-dark") == false) {
+                element.classList.toggle("modo-dark");
+                document.getElementById("modo").innerHTML = "Claro";
+            } else {
+                element.classList.toggle("modo-dark");
+                document.getElementById("modo").innerHTML = "Oscuro";
+            }
+        }
+
+        function inicio() {
+            window.location.href = "../index.html";
+        }
+
+    </script>
+</body>
+
+</html>
