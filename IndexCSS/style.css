@@ -12,11 +12,6 @@ body{
     color: rgb(170, 135, 135);
 }
 
-button{
-    color: rgb(177, 90, 165);
-    background-color: black;
-}
-
 pre{
     font-size:1.5vw;
     margin: 35px;
@@ -42,4 +37,12 @@ hr.primer_separador{
 p.tiempo{
     text-align: right;
     font-size:1.2vw;
+}
+
+button.boton_dark{
+    font-size: 1.9vw;
+    background-color: rgb(34, 29, 39);
+    color:coral;
+    border-radius: 25px;
+    
 }

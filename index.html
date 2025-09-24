@@ -35,24 +35,24 @@
     <main>
         <p class="tiempo" id="tiempo"></p>
         <script>
-            const date = new Date();            
+            const date = new Date();
 
             const formatoDate = date.toLocaleString(
                 "es-US", {
-                    day:"numeric",
-                    month:"short",
-                    year:"numeric",
-                    hour:"numeric",
-                    minute:"2-digit"
-                }
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+                hour: "numeric",
+                minute: "2-digit"
+            }
             );
 
-            document.getElementById("tiempo").innerHTML = formatoDate;
+            document.getElementById("tiempo").innerHTML = "Hoy es: " + formatoDate;
         </script>
 
         <hr class="primer_separador"> 
         <section class="texto-index">
-            <ul>new Date(2025)
+            <ul>
                 <li>
                     <h3>Sobre mí</h3>
                 </li>
@@ -102,8 +102,8 @@
         </section>
 
         <section align="right">
-            <button onclick="cambioDeModo()">
-                Modo darks
+            <button onclick="cambioDeModo()" class="boton_dark" id="modo">
+                Oscuro
             </button>
         </section>
 
@@ -112,7 +112,19 @@
     <script>
         function cambioDeModo() {
             var element = document.body;
+
             element.classList.toggle("modo-dark");
+            
+            if (element.classList.toggle("modo-dark") == false) {
+                element.classList.toggle("modo-dark");
+                document.getElementById("modo").innerHTML = "Claro";
+            } else {
+                element.classList.toggle("modo-dark");
+                document.getElementById("modo").innerHTML = "Oscuro";
+            }
+
+
+
         }
 
     </script>
