@@ -39,3 +39,7 @@ hr.primer_separador{
     border-top: 3px solid #bd7acd;
     border-radius: 5px;
 }
+
+p.tiempo{
+    text-align: right;
+}

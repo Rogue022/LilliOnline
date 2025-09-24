@@ -33,7 +33,11 @@
     </header>
 
     <main>
-        <p>timeStamp: <span id="time">-</span></p>
+        <p class="tiempo" id="tiempo"></p>
+        <script>
+            document.getElementById("tiempo").innerHTML = Date();
+        </script>
+
         <hr class="primer_separador"> 
         <section class="texto-index">
             <ul>
@@ -98,11 +102,7 @@
             var element = document.body;
             element.classList.toggle("modo-dark");
         }
-        function getTime(event) {
-            const time = document.getElementById("time");
-            time.firstChild.nodeValue = event.timeStamp;
-        }
-        document.body.addEventListener("keypress", getTime);
+        
     </script>
 </body>
 
