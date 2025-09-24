@@ -97,16 +97,15 @@
 
     </main>
     <footer>
-        <section class="copyright">
-            Copyright LP 2025
-        </section>
-
         <section align="right">
             <button onclick="cambioDeModo()" class="boton_dark" id="modo">
                 Oscuro
             </button>
         </section>
 
+        <section class="copyright">
+            Copyright ©LP 2025
+        </section>
     </footer>
 
     <script>
@@ -114,7 +113,7 @@
             var element = document.body;
 
             element.classList.toggle("modo-dark");
-            
+
             if (element.classList.toggle("modo-dark") == false) {
                 element.classList.toggle("modo-dark");
                 document.getElementById("modo").innerHTML = "Claro";
@@ -122,9 +121,6 @@
                 element.classList.toggle("modo-dark");
                 document.getElementById("modo").innerHTML = "Oscuro";
             }
-
-
-
         }
 
     </script>

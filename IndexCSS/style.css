@@ -40,9 +40,17 @@ p.tiempo{
 }
 
 button.boton_dark{
-    font-size: 1.9vw;
-    background-color: rgb(34, 29, 39);
-    color:coral;
+    font-size: 1.5vw;
+    background-color: rgb(227, 168, 228);
+    color:rgb(19, 21, 21);
     border-radius: 25px;
-    
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
+
+section.copyright{
+    font-size: 1vw;
+    text-align: center;
+}
+
