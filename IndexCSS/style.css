@@ -29,6 +29,10 @@ pre{
     text-align: right;
 }
 
+p.sub{
+    text-align: left;
+}
+
 hr.primer_separador{
     border-top: 3px solid #bd7acd;
     border-radius: 5px;
@@ -54,3 +58,26 @@ section.copyright{
     text-align: center;
 }
 
+ul.inicio {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: inherit;
+    overflow: auto;
+    height: 100%;
+}
+
+ul li.ini{
+    padding: 10px 12px;
+    display: block;
+    text-decoration: none;
+
+    
+
+}
+
+ul li.ini a:hover{
+    background-color: #c7bad8;
+    margin: 10px;
+}
