@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/HojaDeEstilos.css">
+    <title>Livanna Blog</title>
+
+    <script defer type="module">
+
+        fetch('/Blog/Templates/footer.html')
+            .then(respuesta => {
+                return respuesta.text();
+            })
+            .then(contenido => {
+                document.getElementById('footer').innerHTML = contenido;
+            })
+            .catch(error => { console.error('Error al enviar los datos', error) })
+
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <section class="contenedor">
+            <div class="barra">
+                <a class="logo no-margin centrar-texto" href="index.html">Liv. Lee.</a>
+                <nav class="navegacion">
+                    <a href="AcercaDemi.html" class="navegacion_enlace">Acerca de mi</a>
+                    <a href="Internet.html" class="navegacion_enlace">Cosas de internet</a>
+                    <a href="CV" class="navegacion_enlace">CV</a>
+                </nav>
+            </div>
+        </section>
+        <section class="header-texto">
+            <h1 class="no-margin">Lil Blog</h1>
+            <p>Bienvenidx</p>
+        </section>
+    </header>
+
+    <main class="contenedor">
+        <img src="/Blog/imagenes/spiderman.jpg" alt="PrimeraImagen">
+        <h3 class="centrar-texto">Reflexiones sobre El Coyote </h3>
+        <p class="fecha">10-09-26</p>
+        <p class="parrafo-entrada">
+            La semana pasada fui a ver con sumo agrado la película Coyote vs. ACME a Cinépolis. Les comparto un aviso
+            legal: a lo largo de esta entrada voy a poner las marcas de lo que consumo por una razón muy importante que
+            entenderán más adelante, pero debo de confesar que odio hacer eso: ¿han visto el episodio del horror de Los
+            Simpsons cuando los anuncios cobran vida y para que se mueran deben de dejarle prestarles atención? Pues yo
+            siento que en el momento que callo los nombres de las marcas, una corporación muere y un hada sigue
+            viviendo.
+            <br>Hace aproximadamente 4 meses, en mayo de 2026, Cinépolis estuvo (de nuevo) inmerso en una controversia
+            por cobrar por su servicio de pagos en el kiosko de autocobro; estaba cobrando $6 pesos extra, lo que es
+            aproximadamente el 10% de un precio de su boleto hoy día. Los usuarios (nos) quejamos desde 2025 por tener
+            que pagar esa tarifa cuando ibas físicamente a sus cines y tratabas de comprar un boleto con una persona o
+            en un kiosko. Esa tarifa ya estaba siendo aplicada en sus servicios en línea desde hacía años, y rondaba los
+            $18 (como el 25%) por operación, ya fuera en la aplicación móvil o web, y a pesar de que ya habían muchas
+            personas quejándose de esta práctica injusta, Cinépolis no la cambió hasta que los usuarios del cine usaron
+            las redes sociales para denunciarlos (El Universal).
+            <br>Tanto Cinépolis como muchas otras cadenas de cine del mundo tienen el mismo reto: la gente ya no quiere
+            ir al cine porque los servicios de streaming (i.e. Netflix) están prácticamente monopolizando el contenido
+            audiovisual, y aunque sus tarifas de renta siguen aumentando, la gente no deja de pagarlos.
+            <br>La solución que encontró Cinépolis fue cobrarles más a sus clientes que siguen yendo a su cine. No
+            importa cuándo leas esto: para las compañías, solo somos un número.
+            <br>Además, México se enfrenta a una recesión inminente (El Financiero, Vanguardia), los consumidores la
+            tienen bien difícil para ir al cine: no es fácil ir y hacerte un tiempito, como 3h de tu vida, para ir y
+            gastarte aproximadamente $400 en el cine (si quieres unas modestas palomitas y refresco), cuando ese dinero
+            podría darte de comer por más tiempo que por 3h.
+            <br>Dependiendo de qué generación seas y desde dónde me leas, si antes ir al cine era un privilegio, ahora
+            más. Por ahí leí que incluso la generación Z va al cine con la mentalidad de que es una inversión no para
+            ver películas, sino para conocer a gente y <b>arrancarse</b> los ojos del teléfono (The Guardian). Eso
+            quiere decir
+            que la vida que han llevado ha sido completamente traumatizada por la pandemia, en donde estuvieron aislados
+            mucho tiempo, haciendo doomscroolling, y sin poder ver frente a frente a sus amigos. Más que verlo como algo
+            triste, es una muestra de lo que pueden hacer las redes sociales y un mundo hiperconectado, pero esa es
+            plática para otra entrada del blog.
+            <br>En este minúsculo contexto (a mi parecer) llega a México la película Coyote vs. ACME, una película que
+            te motiva a pensar en la política que rodea a una película desde dentro y fuera de sí misma. Oh sí:
+            <b>política</b>. Muchas personas en México tienen miedo a hablar de política porque piensan que
+            automáticamente que
+            van a formar parte del PRI, o que les va a llegar un “incentivo” de Morena a su casa. Pero la verdad es que
+            la única forma de luchar por ir al cine, de ir a ver las películas por un precio justo, por ir y conocer a
+            personas es hacer política, así como también lo es reclamar espacios y narrativas, es literalmente hacer
+            historia.
+            <br>La mejor forma de escribir la historia es tomar consciencia de nuestro entorno, ya sea en una ciudad
+            grande o en un pueblo olvidado por la civilización, y vaya que esta película escribió un antes y un después
+            en las películas ninguneadas. Si ya la viste, te darás cuenta que muchas caricaturas como el Gallo Claudio
+            tienen un presupuesto bajísimo para su animación, y solo se salvan el Coyote y Bugs Bunny, cuyos animadores
+            pudieron capturar con maestría los movimientos graciosos que los caracterizan. Los actores, que sí
+            entregaron su tarea, son desconocidos y por lo tanto, con los que cualquier espectador capta y se
+            identifica. La única excepción es John Cena, cuyo personaje tiene el papel del sujeto apuesto, exitoso y
+            musculoso, quien ha manipulado incluso las leyes para que todo salga a su favor. Cena lo hace genial, y creo
+            que durante la película jamás podemos dejar de ver al famoso luchador en su personaje Buddy Crane, y al
+            mismo tiempo vemos a este personaje tan avaricioso y despreciable.
+            <br>Por lo que sé, esta película fue bien recibida en LATAM, casi como si la hubieran producido en México o
+            en cualquier otro país de Latinoamética. Y aunque esta película también apela a la nostalgia, como también
+            una larga lista de películas actuales, no deja de ser un homenaje para el pasado que dejaron los Looney
+            Tunes en español latino: Arturo Mercado Chacón vuelve como Bugs, quien ha sido su voz para la gran mayoría
+            de sus apariciones desde 1978 y también la aparición del narrador. Muchas personas se quejan de la
+            tropicalización del doblaje, y yo lo defiendo: creo que no está mal, porque el verdadero trabajo del doblaje
+            no se opaca y alcanzo a entender por qué tomaron la decisión de dirigir así el doblaje, porque es una
+            película que invita a pensar en lo absurdo de las situaciones.
+            <br>También se siente esta película como un tira y afloja en la Warner Bros. Esta película estuvo en
+            producción desde 2021 y tuvo que pasar por muchos obstáculos, desde la pandemia, hasta la inminente quiebra
+            de su productora en 2023 cuando hubo una fusión entre la Warner y Discovery. Esta película, que para 2023 ya
+            estaba terminada, estuvo planeada para nunca ver la luz del sol, como Batgirl. Su única posibilidad de
+            supervivencia era que la comprara una compañía que la distribuyera, en este caso fue Ketchup Entertainment,
+            una compañía que ya había distribuido en 2024 una película previa de los Looney Tunes (El día que la Tierra
+            explotó) y que tuvo muchas limitaciones también.
+            <br><b>¿Pero qué significa que una película sea cancelada?</b> O más bien, ¿por qué luchar por una película
+            de una
+            mega corporación a las que tanto se critica para ir a unos cines tan avaros a comer comida tan cara?
+            <br>De nuevo, el cine es política, te guste o no. Desde la persona que en su tiempo libre decide ir al cine
+            pasando por la persona que necesita trabajo, tiene algún talento creativo y se une a Disney por ejemplo,
+            hasta el hacker que decide piratear la nueva película de Spiderman. Las circunstancias por las que pasa una
+            película es del dominio público y es una expresión de la realidad actual e intervienen muchas fuerzas. Es
+            básicamente, cultura y la cultura es inherentemente política. Si Warner decide cancelar la película del
+            Coyote, es porque hay una fuerza que va en contra de sus intereses, por ejemplo, financieros. El archivar
+            esta película (se usa también el verbo en inglés to shelve) singificaba que esta película que costó $70
+            millones de dólares, ahorraría $30 millones en impuestos solo por distribuirla. Contando lo que puede
+            recaudar esa película, en realidad la película iba a significar más una pérdida que una ganancia. Y contando
+            cómo han fracasado las películas de DC Comics y de Space Jam 2, el riesgo es alto. También el hecho de que
+            salga a la luz, se arriesgan a que haya mala prensa y arruinen más la película.
+            <br>Pero barrer con una película también implica barrer con el trabajo de miles de personas. Desde
+            guionistas, actores y artistas gráficos que luchan contra la IA, artistas que desean una oportunidad de
+            hacerse notar, cuentas saldadas, doblaje asegurado e incluso hasta el café que vendió bien en esa temporada
+            de rodaje. El limbo por el que pasó la película también es parte del sufrimiento de la industria del
+            entretenimiento. Tan solo imagínate hacer un pastel para vender y que te cambien de comprador a cada rato,
+            para que al final pasen 3 años y no se te venda. También es el coste emocional, por eso salieron personas a
+            defenderla, como Marco Vaccaro.
+            <br>El Coyote está lejos de ser perfecta, pero en su forma de capturar la frustración que implica estar
+            rodeada por una compañía codiciosa, la hace genial. Spoiler: al final, El Coyote no gana la demanda, pero es
+            curioso como en el guion, sienta un precedente para que las demás caricaturas se manifiesten por las malas
+            prácticas de la compañía y por sus defectuosos productos. En ese sentido, la película cumple con su cometido
+            y nos enseña lo mismo para sentar un precedente en la historia del cine.
+        </p>
+
+    </main>
+
+
+    <div id="footer">
+
+    </div>
+</body>
+
+</html>
