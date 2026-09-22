@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/HojaDeEstilos.css">
+    <title>Livanna Blog</title>
+
+    <script defer type="module">
+
+        fetch('/Blog/Includes/footer.html')
+            .then(respuesta => {
+                return respuesta.text();
+            })
+            .then(contenido => {
+                document.getElementById('footer').innerHTML = contenido;
+            })
+            .catch(error => { console.error('Error al enviar los datos', error) })
+
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <section class="contenedor">
+            <div class="barra">
+                <a class="logo no-margin centrar-texto" href="index.html">Liv. Lee.</a>
+                <nav class="navegacion">
+                    <a href="AcercaDemi.html" class="navegacion_enlace">Acerca de mi</a>
+                    <a href="Internet.html" class="navegacion_enlace">Cosas de internet</a>
+                    <a href="CV" class="navegacion_enlace">CV</a>
+                </nav>
+            </div>
+        </section>
+        <section class="header-texto">
+            <h1 class="no-margin">L. O. BLOG</h1>
+            <p>Bienvenidx</p>
+        </section>
+    </header>
+
+    <main class="contenedor">
+        <img src="/Blog/imagenes/e5.png" alt="PrimeraImagen">
+        <h3 class="centrar-texto"> Retrospectiva de una ingeniera </h3>
+        <p class="fecha">21-09-26</p>
+        <p class="parrafo-entrada">
+            Soy egresada de cierta universidad y mis últimos dos años estuve rodeada de ChatGPT. Recién salíamos de un
+            encierro de los mil infiernos a causa de la pandemia y todos en general nos preguntábamos si íbamos a
+            sobrevivir, a la vida tan cambiada o a una muerte inminente. Yo me refugié no en los libros, no en las
+            películas, ni siquiera en los videojuegos y eso que me considero gamer (hace poco me enteré que regalaron en
+            el 2020 GTA V y no estuve ahí). No. Mi refugio fueron las matemáticas. Yo venía de 10 años sin estudiar
+            algún tipo de cálculo matemático aparte de la aritmética cotidiana; sin embargo, llevaba un gran impulso
+            físico y psicológico para estudiar Ingeniería en Computación. Venía de una carrera de Literatura, y lo
+            primero que se me ocurrió al pasarme a la ingeniería fue leer matemáticas. Terminé libros completos de
+            ejercicios desde lo básico hasta cálculo avanzado, y de hecho esto provocó que me volviera particularmente
+            buena en cálculo cuando cursé la segunda carrera, lo cual me vino muy bien para sobrevivir a muchas cosas
+            (¡El cálculo es tu mejor amigo!). El resto era pensar, programar, escribir, repetir. Y a pesar de la
+            pandemia (y posteriormente ChatGPT) pude empezar a moldearme lo que siempre desde pequeña había querido ser.
+            <br>
+            En la infancia yo declaraba sin que nadie me lo preguntara: “quiero ser florera”, “quiero ser políglota” (mi
+            mente apenas alcanzaba a entender esta palabra), “quiero ser escritora” y más adelante cuando alcancé a
+            entender un poco mi espíritu finalmente declaré: “quiero estudiar sistemas computacionales”. Como una
+            mujercita de 11-12 años con muchos obstáculos, cedí ante la duda a partir de que mi propia familia me
+            desalentara de estudiar una ingeniería: “No eres buena para las matemáticas, fallarás”. Siempre fue así en
+            mi vida; vivo en un mundo donde continuamente se desalienta a las mujeres, tanto dentro como fuera de la
+            familia. Al no creerme tan buena en nada más que la literatura y las lenguas, me acerqué a las letras (y
+            jamás me arrepentiré), y mientras era buena en eso, paralelamente aprendía a programar, leía libros de
+            informática y en la biblioteca me la pasaba más en la sección de ciencia y tecnología. Así, en mi primera
+            carrera, ayudaba a mis compañeros en el uso de la computadora, los alentaba a usar Linux (¡desde ese
+            entonces!), reparaba computadoras, editaba páginas web, aportaba en wikipedia y me metía a cursos de
+            metadatos en bibliotecología. La gente de la biblioteca en el piso 7 preguntaba si yo estudiaba ingeniería,
+            y respondía que no, con suma tristeza y frustración. No fue hasta que empecé a trabajar en la propia
+            universidad que pude armarme de valor para intentar recuperar lo que siempre estuve destinada a ser y en el
+            tránsito, hacer que todos los que dudaron de mí me besaran el trasero. La historia de cómo hice mis exámenes
+            de ingreso es graciosa y muy buena, pero ya se las contaré en otra ocasión.
+            <br>
+            Así que estudié intensamente y entré a la Ingeniería en Computación. Las personas más inteligentes que he
+            conocido habían pasado por ahí, así que me sentí afortunada y agradecida… aunque la propia institución
+            estuviera en decadencia absoluta. Cada que iba a esa universidad me imaginaba la escena de la película
+            Matilda cuando llega por primera vez a su escuela y el narrador dice: “se imaginaba un bello edificio lleno
+            de árboles, flores y columpios. [La escena muestra un edificio tipo Auschwitz]. Sí, tenía un edificio… y
+            niños. Pero a pesar del aspecto de la escuela, ella estaba feliz de estar ahí”. Y así era, estaba feliz de
+            acercarme aunque fuera así a Computación, porque mientras fuera eso, estaba feliz.
+            <br>
+            Y la universidad pública a la que asistí, como casi toda escuela en este país, estaba rota y muy atrasada.
+            Había mucha ignorancia, bullying y envidias por todas partes. Muchos se escudaban en la idea de que en esa
+            universidad todos se ayudaban y con muy poco podíamos hacer grandes cosas, pero era solo una cortina de humo
+            que abría la puerta para que todos se aprovecharan de ti en el momento que te descuidaras y para que la
+            escuela no les diera a sus estudiantes un espacio y herramientas dignas para que continuaran con sus
+            estudios.
+            <br>
+            Y aún así, aprendí mucho. Sentía que estaba en el lugar y en el momento correctos, a pesar de que en mi
+            mente añoraba la idea de haber estado ahí en el 2012 con el boom de las dot com y las redes sociales;
+            rodeada de personas que platicaban de las series y películas del momento y todos se compartían su Blog o su
+            MySpace, o la última aplicación móvil que habían hecho. Durante el tránsito en mi carrera, la mayoría de los
+            chicos difícilmente vieron películas de ciencia ficción, mucho menos series o incluso anime. Casi todo
+            giraba en torno a los K-dramas y nadie se reunía a programar. No conocí a nadie que leyera algo que no fuera
+            tarea. Al final, seguía sola y me preguntaba cuándo iba a conocer a algún nerd de verdad que le gustara más
+            allá de Spiderman. Todo era muy superficial para mí y lo que me llenaba solo era asistir a mis clases y ya.
+            Habían sus excepciones, uno que otro nerd que no fuera tan machista platicaba conmigo de procesadores y de
+            tarjetas gráficas o de videojuegos y de frame-rates. ¿Éramos una raza en peligro de extinción en la
+            mismísima carrera de ingeniería en Computación?
+            <br>
+            Llegó ChatGPT y muchos respiraron porque pudieron responder a las respuestas de los exámenes, automatizar
+            tareas en general y sacar proyectos ridículamente difíciles para entregarlos como calificación final o
+            incluso examen profesional. Para este entonces, los profesores acostumbraban a trabajar lo mínimo y dejaban
+            investigaciones, tareas y ejercicios exageradamente largos de un día para otro; nunca los revisaban ni mucho
+            menos daban retroalimentación sobre la relevancia de la tarea. Eran profesores que se creían el último
+            ingeniero del mundo, jamás habían salido de la escuela a la industria y por supuesto, eran parte del
+            sindicato de profesores, lo que los hacía prácticamente inamovibles del programa. Tenía una maestra del
+            sindicato que me daba la materia de Compiladores y ni siquiera sabía qué era un compilador, esto lo supe
+            porque en la primera clase nos enseñó sobre religión, espiritualidad, chakras, etc. Mi generación jamás se
+            quejó (la que me siguió, sí). Para esas materias como Compiladores del 2024, usábamos mis amigos y yo
+            ChatGPT para automatizar las tareas, y nos salía un documento de 15 páginas con “investigaciones” que ni los
+            alumnos o los profesores iban a leer. Pero nadie nos preguntaba, nadie nos enseñaba nada, nadie se
+            preocupaba. Al final, todos íbamos a ser guindas y blancos que en un futuro presumiríamos en puestecillos de
+            alguna corporación. ¿Qué clase de ánimo es ese en una universidad? Pues lo era (es?).
+            <br>
+            La cosa se puso seria para mí cuando no podía pasar un examen de cálculo de un profesor que tenía la fama
+            tan podrida de reprobar a todos, incluso los que habían sido mis profesores. Y veía que mi compañerito que
+            se la pasaba bebiendo y que no sabía casi nada de computación sí estaba aprobando. “Si ni siquiera sabe
+            derivar”, pensaba asombrada al verlo saliendo del salón, no sin antes decirme “ser derecho no te lleva a
+            ningún lado”. También, cuando se trataba de programar en C++ algoritmos de procesos, me ponía muy nerviosa
+            con los regaños (azotes) de mi profesora al darse cuenta que no podía entender Round Robin o FCFS y que
+            aunque sabía usar punteros, nunca fui lo suficientemente rápida para entregar lo que pedía. De 30 alumnos,
+            solo 1 entregaba los ejercicios de algoritmos. Nadie me dijo cómo proceder y te azotaban si te equivocabas.
+            Así que elegí en el caso de los algoritmos de procesos, no aprender y sobrevivir. Al mismo tiempo, pasé mi
+            examen de cálculo, con un desarrollo envidiable, tanto, que no se parecía nada al mio. Porque nada había
+            sido mío, lo había hecho otra persona y ChatGPT se lo fusiló para que yo pudiera pasar mis materias. Pero
+            nadie tenía esa conciencia, porque nadie se preocupaba de saber cómo funcionan las cosas, porque la escuela
+            está demasiado atrasada y podrida en corrupción, mientras que es demasiado impresionable con cualquier
+            herramienta digital. Como mi propio país.
+            <br>
+            Después de pasar esas dos materias estaba desolada porque había perdido la oportunidad de programar y de
+            hacer cálculo. Era buena y sabía cómo hacer las cosas, pero la duda, la idea de que no soy lo
+            suficientemente buena para ser competitiva se apoderó de mi. En el segundo semestre del 2024 me propuse solo
+            utilizarla para consulta, pero la verdad es que al trabajar en equipo, yo era la que desentonaba con los
+            trabajos, porque todos tenían el mismo tono de ChatGPT. Dios, era tan obvio, por qué no nos regañaban (me
+            preguntaba), por qué no les importaba y levantaban la voz. Pero eran pocos, muy pocos, los profesores que
+            obligaban a sus estudiantes a trabajar por su cuenta y con su cerebro.
+            <br>
+            Llegó el final de la carrera, y cada que hacía consultas a Chat, me sentía culpable, pero no entendía por
+            qué. Podía ver qué tan adictiva era esa cosa, que cualquiera sin un espíritu o confianza fuertes, caía
+            rendida ante ese monstruo corporativo. De alguna forma me sentía asqueada, porque las enseñanzas de mi
+            profesora de Humanidades (en Ingeniería) nos hacía leer ensayos y libros sobre el papel de la tecnología en
+            la sociedad y nos hacía cuestionar qué diablos era cada cosa. Nos poníamos a platicar sobre las últimas
+            noticias de tecnología, y nos dábamos cuenta que todo era política, pues siempre terminábamos hablando de
+            Trump o de las guerras de Estados Unidos. Esa era una profesora que hacía su tarea: guiarnos a ser mejores
+            ingenieros. Al final de cuentas, como yo lo veo, es un milagro que una mujer pueda estudiar la ingeniería,
+            mejor que se cuestione por qué está ahí y por qué está haciendo eso.
+            <br>
+            Y ella lo lograba... Por eso me peleé con casi todos mis compañeros de la carrera y les dejé de hablar,
+            empezando por mi primer equipo de titulación.
+            <br>
+            Dos sujetos me invitaron a participar en su equipo de titulación. Primero fue lo usual: preanálisis,
+            análisis, diagramas, marco teórico. Les decía a mis compañeros cómo citar y qué software usar para tener más
+            ordenada la bibliografía, pero me mitraban como si estuviera loca (al final, no citaban ellos). Les decía
+            cómo hacer los diagramas, una mezcla entre lo que nos decía nuestro asesor, nuestro profesor y la
+            documentación oficial de la IEEE. Era difícil, acepto, hacer esos diagramas, pues tenían que ser
+            retroalimentados con el código que generáramos, pero no había código. Yo les hablé de GitHub, del
+            versionamiento, de cómo usar VSC y programar al mismo tiempo… no lo hicieron (de nuevo, me miraban como si
+            estuviera loca). Empecé a hacer el código y les dije que aportaran, que hicieran el merge, pero no me
+            entendían y yo, me harté. No era ni su madre, ni su maestra, era una programadora esperando trabajar. Estaba
+            harta de tener que ir con la corriente, siguiendo la misma mediocridad ciega con personas con las que no
+            tengo nada en común. Para empezar, ellos sobreviven, yo no. Y para mis adentros yo decía: “no voy a tener
+            esa mancha inborrable en mi trayectoria, una en la que no sé qué chingados estoy haciendo y no son mis
+            ideas”. Encima de todo esto, había un rechazo generalizado hacia mí debido a que me pronuncié en contra del
+            acoso sexual y escolar tan intenso que sufría en la escuela, por chicos, por estudiar, por querer hacer bien
+            las cosas, por ser mujer. Mi equipo de titulación me decían tipo: “te lo mereces”, “no les vamos a dejar de
+            hablar solo porque te hicieron sentir una mierda”. Pues bien, entonces me fui y continué yo sola.
+            <br>
+            Jamás me había sentido tan sola en la ingeniería, pero hasta yo sabía que acompañarme de cualquiera era lo
+            mismo o peor. Pocos amigos se quedaron a escucharme y a apoyarme, y lo poco que se acercaron a mí, lo
+            utilicé como si fuera mi estandarte para presentarme a las últimas clases de mi carrera. Y en el momento más
+            oscuro y final de la carrera, me propuse aprender. La última materia eran Sistemas Distribuidos, y como yo
+            siempre había querido aprender sistemas, esto fue un oasis en medio del interminable desierto, y no tienen
+            idea de cómo me enamoré de hacer eso. La maestra difícilmente sabía algo de aquello, y daba pie a que
+            pudiera experimentar con las computadoras. Además, ese semestre lo recuerdo muy bien porque había un
+            grandulón que no me dejaba de ver con sus hermosos ojos color miel que me derretían. Afortunadamente no pasó
+            nada (no caguen donde comen).
+            <br>
+            Todo el trabajo final de Distribuidos lo hice rústicamente, las configuraciones, el balaceador, todo se hizo
+            a la medida, y se constituyó como un trabajo que se hace porque te valoras a ti mismo (y a Linux) y eso
+            nadie te lo puede quitar.
+            <br>
+            Mi asesor no fue tan diferente a mis amigos o a la mayoría de mis profesores, y más allá de cuestionar el
+            uso de ChatGPT, preguntaba sobre los diagramas y calificaba en lo general los avances del trabajo como
+            “bien”. Pero mi escuela tenía un edificio… y niños…
+            <br>
+            En fin.
+            <br>
+            Desde hace 2 años mi historial se ha llenado de búsquedas en internet, tratando de encontrar cuál es el
+            ánimo sobre ChatGPT, sobre los estudiantes que lo usan, qué opinan los ingenieros. Yo diría que un 70% de
+            las publicaciones que he leído sobre el uso de las LLM en la educación y en la generación de código son
+            negativas, el resto afirman que les hace más fácil el trabajo porque los vuelve más productivos. Pero todas
+            esas búsquedas las hago porque la misma presión de la escuela, de la sociedad, de la misma ingeniería se
+            vuelven contrarias en todos los sentidos a lo que representan las LLM, y en un momento, se vuelven irónicas.
+            También busco leer de eso, como ahora estoy leyendo Blood in the Machine de Brian Merchant, porque me siento
+            sola pensando que hago cosas raras en un mundo que va con la corriente que le imponen y dicen cosas como “el
+            que tranza no avanza”. Es un mundo cruel que desalienta, que mejora la vida del 1% de la población del
+            mundo. Los chicos que perdieron la oportunidad de aprender en la universidad a cambio de entregar sus
+            tareas, se quedarán ignorantes un largo tiempo. ¿Pero qué no es lo que quiere el sistema en el que vivimos?
+            Ser ignorante y no cuestionarte las millones de cosas que están haciendo las venerables compañías de
+            tecnología por ti. Y no hablemos de la educación elemental, pues me imagino a un niño abrumado porque no le
+            entiende a las matemáticas y en lugar de comprenderlas, va a ser ignorante de ellas en un mundo capitalista.
+            Va a ser condenado a no pensar nunca, y serán sus emociones manipuladas por redes sociales, se hará
+            extremista y beneficiará un partido extremista también. Muy, muy 1984.
+            <br>
+            De buscar artículos sobre opiniones de LLM me di cuenta que también estoy luchando contra mi falta de
+            confianza. Desde pequeña he dudado de mí, porque mi familia ha dudado de mí. Solo un par de profesores
+            fueron mis verdaderos maestros, ellos me motivaron a ser así y probablemente ellos hubieran querido que
+            fuera fuerte e independiente. Y esa fuerza debe de vencer a la duda de que si hago algo está malo o no es
+            suficientemente bueno. La verdad es que es bueno porque está hecho por mí y no podría haber sido de otra
+            forma. Como este blog. Este blog por mucho tiempo lo pospuse por esa duda y falta de motivación. Pero ceder
+            a esas fuerzas aplastantes sería dejar de ser yo misma, así que aunque esté raro mi blog, lo haré yo misma.
+            Aunque no esté de moda, lo mantendré. Aunque no sea el framework adecuado, lo construiré con mi propia
+            filosofía de ser Ingeniera en Computación.
+            <br>
+            <br>
+            P.D.: Sobre mi titulación ya hablaré de eso en otra publicación.
+            <br>
+            <br>
+            A quien me lea:
+            <br>
+            Gracias por leerme. Quiero decirte que si estás de acuerdo con lo que escribí, que no estás sola o solo. El
+            mundo es un lugar muy feo últimamente. Lo que me saca de ese ánimo pesimista es leer literatura y tratar al
+            día siguiente más fuerte que ayer. En un futuro pondré comentarios y con gusto, podré leerte.
+
+        </p>
+
+    </main>
+
+
+    <div id="footer">
+
+    </div>
+</body>
+
+</html>
