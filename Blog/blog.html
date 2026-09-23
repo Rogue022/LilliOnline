@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,47 +10,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/HojaDeEstilos.css">
     <title>L. O. Blog</title>
+
+
+
+    <script defer type="module">
+        const div = document.getElementById('publicacion');
+        const molde = document.getElementById('card-template');
+        const contenido = molde.content.cloneNode(true);
+
+
+
+        const response = await fetch("Entradas/publicaciones.json");
+
+        console.log(response.ok);
+        console.log(response.status);
+
+        const informacion = await response.json();
+    
+        contenido.querySelector('img').setAttribute("src", informacion.Imagen);
+        contenido.querySelector('h4').innerText = informacion.Titulo;
+        contenido.querySelector('p').innerText = informacion.Fecha;
+        contenido.querySelector('cite').innerText = informacion.Descripcion;
+        contenido.querySelector('a').setAttribute("href", informacion.Referencia);
+
+
+
+        div.appendChild(contenido);
+
+    </script>
 </head>
 <body>
     <header class="header">
         <section class="contenedor">
             <div class="barra">
-                <a class="logo no-margin centrar-texto" href="index.html">Liv. Lee.</a>
+                <a class="logo no-margin centrar-texto" href="index.html">Página principal</a>
                 <nav class="navegacion">
-                    <a href="AcercaDemi.html" class="navegacion_enlace">Acerca de mi</a>
-                    <a href="Internet.html" class="navegacion_enlace">Cosas de internet</a>
-                    <a href="CV" class="navegacion_enlace">CV</a>
+                    <a href="AcercaDemi.html" class="navegacion_enlace">Contacto</a>
+                    <a href="Internet.html" class="navegacion_enlace">Knowledge base</a>
                 </nav>
-            </div>            
+            </div>
         </section>
         <section class="header-texto">
             <h1 class="no-margin">L. O. BLOG</h1>
-                <p>Bienvenidx</p>
+            <p>Bienvenidx</p>
         </section>
-    </header>
 
-    <?php echo "Hola soy Lili!!!" ?>
+
+    </header>
 
     <div class="contenedor contenido-principal">
         <main class="blog">
             <h3>Últimas entradas</h3>
 
-            
-            <article class="entrada">
-                <div class="entrada_imagen">
-                    <img src="imagenes/e5.png" alt="imagen blog">
-                </div>
-                <div class="entrada_contenido">
-                    <h4 class="no-margin">Retrospectiva de una ingeniera</h4>
-                    <p class="fecha">21-09-26</p>
-                    <p> Soy egresada de cierta universidad y mis últimos dos años estuve rodeada de ChatGPT. Recién salíamos de un
-            encierro de los mil infiernos a causa de la pandemia y todos en general nos preguntábamos si íbamos a
-            sobrevivir, a la vida tan cambiada o a una muerte inminente. Yo me refugié...
-                        
-                        
-                    <a href="Entradas/entrada5.html" class="boton boton-primario">Leer más</a>
-                </div>
-            </article>
+            <div id="publicacion"></div>
+
+
+
+
+
 
             <article class="entrada">
                 <div class="entrada_imagen">
@@ -70,7 +88,8 @@
                 <div class="entrada_contenido">
                     <h4 class="no-margin">Hola año</h4>
                     <p class="fecha">01-01-25</p>
-                    <p>Hoy me estaba riendo (porque ya uno no puede llorar) de un meme en Twitter. Lo sé, ya no se llama así, pero Musk me puede...</p>
+                    <p>Hoy me estaba riendo (porque ya uno no puede llorar) de un meme en Twitter. Lo sé, ya no se llama
+                        así, pero Musk me puede...</p>
                     <a href="Entradas/entrada2.html" class="boton boton-primario">Leer más</a>
                 </div>
             </article>
@@ -83,44 +102,73 @@
                 <div class="entrada_contenido">
                     <h4 class="no-margin">Contemplando estrellas</h4>
                     <p class="fecha">28-12-24</p>
-                    <p>Se dice que es apócrifo de ella; no estoy segura si Eleanor Roosevelt si habría dicho lo siguiente: "Do what you feel in your heart to be right -for you'll be critricized anyway. You'll me 'dammned' if you do, and dammned if you don't." Pero no importa. No me preocupa el autor de esa cita, porque es de las primeras cosas que me impresionaron cuando... </p>
+                    <p>Se dice que es apócrifo de ella; no estoy segura si Eleanor Roosevelt si habría dicho lo
+                        siguiente: "Do what you feel in your heart to be right -for you'll be critricized anyway. You'll
+                        me 'dammned' if you do, and dammned if you don't." Pero no importa. No me preocupa el autor de
+                        esa cita, porque es de las primeras cosas que me impresionaron cuando... </p>
                     <a href="Entradas/entrada1.html" class="boton boton-primario">Leer más</a>
                 </div>
             </article>
 
-            
+
         </main>
         <aside class="sidebar">
             <h3>Historial</h3>
             <ul class="entradas no-padding">
                 <li class="widget-entrada">
                     <h4 class="no-margin"> Hola 2025</h4>
-                    <p>Hoy me estaba riendo (porque ya uno no puede llorar) de un meme en Twitter. Lo sé...</p>                    
+                    <p>Hoy me estaba riendo (porque ya uno no puede llorar) de un meme en Twitter. Lo sé...</p>
                     <a href="Entradas/entrada2.html" class="boton boton-secundario">Leer</a>
                 </li>
                 <li class="widget-entrada">
                     <h4 class="no-margin"> Contemplando estrellas</h4>
-                    <p>Se dice que es apócrifo de ella; no estoy segura si Eleanor Roosevelt si habría dicho lo siguiente: "Do what you feel in...</p>
+                    <p>Se dice que es apócrifo de ella; no estoy segura si Eleanor Roosevelt si habría dicho lo
+                        siguiente: "Do what you feel in...</p>
                     <a href="Entradas/entrada1.html" class="boton boton-secundario">Leer</a>
                 </li>
-                
+
             </ul>
         </aside>
     </div>
 
-    
+
     <footer class="footer">
         <section class="contenedor">
             <div class="barra">
-                <a class="logo no-margin centrar-texto" href="index.html">Liv. Lee.</a>
+                <a class="logo no-margin centrar-texto" href="index.html">L.L.</a>
                 <nav class="navegacion">
-                    <a href="AcercaDemi.html" class="navegacion_enlace">Acerca de mi</a>
+                    <a href="AcercaDemi.html" class="navegacion_enlace">Contacto</a>
                     <a href="Internet.html" class="navegacion_enlace">Cosas de internet</a>
                     <a href="CV" class="navegacion_enlace">CV</a>
                 </nav>
-            </div>            
+            </div>
         </section>
 
     </footer>
+
+    <!-- ========== Start Template tag... Quinta entrada ========== -->
+
+
+    <template id="card-template">
+        <article class="entrada">
+            <div class="entrada_imagen">
+                <img alt="imagen de la entrada">
+            </div>
+            <div class="entrada_contenido">
+                <h4 class="no-margin"> </h4>
+                <p class="fecha"></p>
+                <cite></cite>
+                <br>
+                <br>
+                <a class="boton boton-primario">Leer más</a>
+                < </div>
+        </article>
+    </template>
+
+
+
+    <!-- ========== End Template tag ========== -->
+
 </body>
+
 </html>
