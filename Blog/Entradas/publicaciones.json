@@ -1,7 +1,37 @@
-{
-    "Fecha": "21-09-26",
-    "Titulo": "Retrospectiva de una ingeniera",
-    "Descripcion": "Soy egresada de cierta universidad y mis últimos dos años estuve rodeada de ChatGPT. Recién salíamos de un encierro de los mil infiernos a causa de la pandemia y todos en general nos preguntábamos si íbamos a sobrevivir, a la vida tan cambiada o a una muerte inminente. Yo me refugié...",
-    "Imagen": "imagenes/e5.png",
-    "Referencia": "Entradas/entrada5.html"
-}
+[
+    {
+        "Fecha": "21-09-26",
+        "Titulo": "Retrospectiva de una ingeniera",
+        "Descripcion": "Soy egresada de cierta universidad y mis últimos dos años estuve rodeada de ChatGPT. Recién salíamos de un encierro de los mil infiernos a causa de la pandemia y todos en general nos preguntábamos si íbamos a sobrevivir, a la vida tan cambiada o a una muerte inminente. Yo me refugié...",
+        "Imagen": "imagenes/e5.png",
+        "Referencia": "Entradas/entrada5.html"
+    },
+    {
+        "Fecha": "10-09-26",
+        "Titulo": "Reflexiones sobre El Coyote",
+        "Descripcion": "La semana pasada fui a ver con sumo agrado la película Coyote vs. ACME...",
+        "Imagen": "imagenes/spiderman.jpg",
+        "Referencia": "Entradas/entrada4.html"
+    },
+    {
+        "Fecha": "10-01-25",
+        "Titulo": "No Pain, No Gain",
+        "Descripcion": "Además de estar estudiando y trabajando sobre mi proyecto final, también de manera indirecta me he preocupado por mejorar la calidad de mis blogs tanto técnica como literariamente...",
+        "Imagen": "imagenes/PlumayTeclado.png",
+        "Referencia": "Entradas/entrada3.html"
+    },
+    {
+        "Fecha": "01-01-25",
+        "Titulo": "Hola año",
+        "Descripcion": "Hoy me estaba riendo (porque ya uno no puede llorar) de un meme en Twitter. Lo sé, ya no se llama así, pero Musk me puede...",
+        "Imagen": "imagenes/jolyne.jpg",
+        "Referencia": "Entradas/entrada2.html"
+    },
+    {
+        "Fecha": "28-12-24",
+        "Titulo": "Contemplando estrellas",
+        "Descripcion": "Se dice que es apócrifo de ella; no estoy segura si Eleanor Roosevelt si habría dicho lo siguiente: 'Do what you feel in your heart to be right ...",
+        "Imagen": "imagenes/telescopio.jpg",
+        "Referencia": "Entradas/entrada1.html"
+    }
+]

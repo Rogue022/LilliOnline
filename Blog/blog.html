@@ -11,34 +11,45 @@
     <link rel="stylesheet" href="CSS/HojaDeEstilos.css">
     <title>L. O. Blog</title>
 
-
-
     <script defer type="module">
-        const div = document.getElementById('publicacion');
-        const molde = document.getElementById('card-template');
-        const contenido = molde.content.cloneNode(true);
+        async function loadJSON() {
+
+            const div = document.getElementById('publicacion');
+            const molde = document.getElementById('card-template');
+
+            try {
+                const response = await fetch("Entradas/publicaciones.json");
+                if (!response.ok) {
+                    console.log(response.status);
+                }
+                
+                const entradas = 5;
+                const informacion = await response.json();
+
+
+                for (let i = 0; i < entradas; i++) {
+                    const contenido = molde.content.cloneNode(true);
+
+                    contenido.querySelector('img').setAttribute("src", informacion[i].Imagen);
+                    contenido.querySelector('h4').innerText = informacion[i].Titulo;
+                    contenido.querySelector('p').innerText = informacion[i].Fecha;
+                    contenido.querySelector('cite').innerText = informacion[i].Descripcion;
+                    contenido.querySelector('a').setAttribute("href", informacion[i].Referencia);
+
+                    div.appendChild(contenido);
+                }
 
 
 
-        const response = await fetch("Entradas/publicaciones.json");
 
-        console.log(response.ok);
-        console.log(response.status);
+            } catch (err) { console.log(err.message) }
+        }
 
-        const informacion = await response.json();
-    
-        contenido.querySelector('img').setAttribute("src", informacion.Imagen);
-        contenido.querySelector('h4').innerText = informacion.Titulo;
-        contenido.querySelector('p').innerText = informacion.Fecha;
-        contenido.querySelector('cite').innerText = informacion.Descripcion;
-        contenido.querySelector('a').setAttribute("href", informacion.Referencia);
-
-
-
-        div.appendChild(contenido);
+        loadJSON();
 
     </script>
 </head>
+
 <body>
     <header class="header">
         <section class="contenedor">
@@ -63,53 +74,6 @@
             <h3>Últimas entradas</h3>
 
             <div id="publicacion"></div>
-
-
-
-
-
-
-            <article class="entrada">
-                <div class="entrada_imagen">
-                    <img src="imagenes/spiderman.jpg" alt="imagen blog">
-                </div>
-                <div class="entrada_contenido">
-                    <h4 class="no-margin">Reflexiones sobre El Coyote</h4>
-                    <p class="fecha">10-09-26</p>
-                    <p> La semana pasada fui a ver con sumo agrado la película Coyote vs. ACME... </p>
-                    <a href="Entradas/entrada4.html" class="boton boton-primario">Leer más</a>
-                </div>
-            </article>
-
-            <article class="entrada">
-                <div class="entrada_imagen">
-                    <img src="imagenes/jolyne.jpg" alt="imagen blog">
-                </div>
-                <div class="entrada_contenido">
-                    <h4 class="no-margin">Hola año</h4>
-                    <p class="fecha">01-01-25</p>
-                    <p>Hoy me estaba riendo (porque ya uno no puede llorar) de un meme en Twitter. Lo sé, ya no se llama
-                        así, pero Musk me puede...</p>
-                    <a href="Entradas/entrada2.html" class="boton boton-primario">Leer más</a>
-                </div>
-            </article>
-
-            <!--Copiar para más entradas (todo article)-->
-            <article class="entrada">
-                <div class="entrada_imagen">
-                    <img src="imagenes/telescopio.jpg" alt="imagen blog">
-                </div>
-                <div class="entrada_contenido">
-                    <h4 class="no-margin">Contemplando estrellas</h4>
-                    <p class="fecha">28-12-24</p>
-                    <p>Se dice que es apócrifo de ella; no estoy segura si Eleanor Roosevelt si habría dicho lo
-                        siguiente: "Do what you feel in your heart to be right -for you'll be critricized anyway. You'll
-                        me 'dammned' if you do, and dammned if you don't." Pero no importa. No me preocupa el autor de
-                        esa cita, porque es de las primeras cosas que me impresionaron cuando... </p>
-                    <a href="Entradas/entrada1.html" class="boton boton-primario">Leer más</a>
-                </div>
-            </article>
-
 
         </main>
         <aside class="sidebar">
@@ -146,7 +110,7 @@
 
     </footer>
 
-    <!-- ========== Start Template tag... Quinta entrada ========== -->
+    <!-- ========== Start Template tag... ========== -->
 
 
     <template id="card-template">
@@ -161,7 +125,7 @@
                 <br>
                 <br>
                 <a class="boton boton-primario">Leer más</a>
-                < </div>
+                </div>
         </article>
     </template>
 
