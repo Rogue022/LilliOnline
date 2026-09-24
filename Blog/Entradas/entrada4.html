@@ -10,17 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/HojaDeEstilos.css">
     <title>Livanna Blog</title>
-     <script defer type="module">
+    <script defer type="module">
             async function loadFooter() {
                 const piePag = document.getElementById('elpie');
-                fetch("/Blog/Templates/footer.html")
+                fetch("../Templates/footer.html")
                     .then(x => x.text())
                     .then(y => piePag.innerHTML = y)
                     .catch(err => console.log(err))
             }
             async function loadHeader() {
                 const piePag = document.getElementById('lacabeza');
-                fetch("/Blog/Templates/header.html")
+                fetch("../Templates/header.html")
                     .then(x => x.text())
                     .then(y => piePag.innerHTML = y)
                     .catch(err => console.log(err))
