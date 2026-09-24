@@ -11,31 +11,31 @@
     <link rel="stylesheet" href="../CSS/HojaDeEstilos.css">
     <title>Livanna Blog</title>
     <script defer type="module">
-            async function loadFooter() {
-                const piePag = document.getElementById('elpie');
-                fetch("../Templates/footer.html")
-                    .then(x => x.text())
-                    .then(y => piePag.innerHTML = y)
-                    .catch(err => console.log(err))
-            }
-            async function loadHeader() {
-                const piePag = document.getElementById('lacabeza');
-                fetch("../Templates/header.html")
-                    .then(x => x.text())
-                    .then(y => piePag.innerHTML = y)
-                    .catch(err => console.log(err))
-            }
+        async function loadFooter() {
+            const piePag = document.getElementById('elpie');
+            fetch("../Templates/footer.html")
+                .then(x => x.text())
+                .then(y => piePag.innerHTML = y)
+                .catch(err => console.log(err))
+        }
+        async function loadHeader() {
+            const piePag = document.getElementById('lacabeza');
+            fetch("../Templates/header.html")
+                .then(x => x.text())
+                .then(y => piePag.innerHTML = y)
+                .catch(err => console.log(err))
+        }
 
-            loadHeader();
-            loadFooter();
+        loadHeader();
+        loadFooter();
 
-        </script>
+    </script>
 </head>
 
 <body>
-   <div id="lacabeza"></div>
+    <div id="lacabeza"></div>
     <main class="contenedor">
-        <img src="/Blog/imagenes/e5.png" alt="PrimeraImagen">
+        <img src="../imagenes/e5.png" alt="PrimeraImagen">
         <h3 class="centrar-texto"> Retrospectiva de una ingeniera </h3>
         <p class="fecha">21-09-26</p>
         <p class="parrafo-entrada">
