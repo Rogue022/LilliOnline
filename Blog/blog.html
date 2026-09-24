@@ -13,62 +13,52 @@
 
     <script defer type="module">
         async function loadJSON() {
-
             const div = document.getElementById('publicacion');
             const molde = document.getElementById('card-template');
-
             try {
                 const response = await fetch("Entradas/publicaciones.json");
                 if (!response.ok) {
                     console.log(response.status);
                 }
-
                 const entradas = 5;
-                
                 const informacion = await response.json();
-
-
                 for (let i = 0; i < entradas; i++) {
                     const contenido = molde.content.cloneNode(true);
-
                     contenido.querySelector('img').setAttribute("src", informacion[i].Imagen);
                     contenido.querySelector('h4').innerText = informacion[i].Titulo;
                     contenido.querySelector('p').innerText = informacion[i].Fecha;
                     contenido.querySelector('cite').innerText = informacion[i].Descripcion;
                     contenido.querySelector('a').setAttribute("href", informacion[i].Referencia);
-
                     div.appendChild(contenido);
                 }
-
-
-
-
             } catch (err) { console.log(err.message) }
         }
+        async function loadFooter() {
+            const piePag = document.getElementById('elpie');
+            fetch ("Templates/footer.html")
+            .then(x=>x.text())
+            .then(y => piePag.innerHTML=y)
+            .catch(err => console.log(err))
+        }
+        async function loadHeader() {
+            const piePag = document.getElementById('lacabeza');
+            fetch ("Templates/header.html")
+            .then(x=>x.text())
+            .then(y => piePag.innerHTML=y)
+            .catch(err => console.log(err))
+        }
 
+        loadHeader();
         loadJSON();
+        loadFooter();
+
+
 
     </script>
 </head>
 
 <body>
-    <header class="header">
-        <section class="contenedor">
-            <div class="barra">
-                <a class="logo no-margin centrar-texto" href="index.html">Página principal</a>
-                <nav class="navegacion">
-                    <a href="AcercaDemi.html" class="navegacion_enlace">Contacto</a>
-                    <a href="Internet.html" class="navegacion_enlace">Knowledge base</a>
-                </nav>
-            </div>
-        </section>
-        <section class="header-texto">
-            <h1 class="no-margin">L. O. BLOG</h1>
-            <p>Bienvenidx</p>
-        </section>
-
-
-    </header>
+    <div id="lacabeza"></div>
 
     <div class="contenedor contenido-principal">
         <main class="blog">
@@ -97,23 +87,7 @@
     </div>
 
 
-    <footer class="footer">
-        <section class="contenedor">
-            <div class="barra">
-                <a class="logo no-margin centrar-texto" href="index.html">L.L.</a>
-                <nav class="navegacion">
-                    <a href="AcercaDemi.html" class="navegacion_enlace">Contacto</a>
-                    <a href="Internet.html" class="navegacion_enlace">Cosas de internet</a>
-                    <a href="CV" class="navegacion_enlace">CV</a>
-                </nav>
-            </div>
-        </section>
-
-    </footer>
-
     <!-- ========== Start Template tag... ========== -->
-
-
     <template id="card-template">
         <article class="entrada">
             <div class="entrada_imagen">
@@ -126,13 +100,13 @@
                 <br>
                 <br>
                 <a class="boton boton-primario">Leer más</a>
-                </div>
+            </div>
         </article>
     </template>
-
-
-
     <!-- ========== End Template tag ========== -->
+
+
+    <footer id="elpie"></footer>
 
 </body>
 

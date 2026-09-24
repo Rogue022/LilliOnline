@@ -10,39 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/HojaDeEstilos.css">
     <title>Livanna Blog</title>
+     <script defer type="module">
+            async function loadFooter() {
+                const piePag = document.getElementById('elpie');
+                fetch("/Blog/Templates/footer.html")
+                    .then(x => x.text())
+                    .then(y => piePag.innerHTML = y)
+                    .catch(err => console.log(err))
+            }
+            async function loadHeader() {
+                const piePag = document.getElementById('lacabeza');
+                fetch("/Blog/Templates/header.html")
+                    .then(x => x.text())
+                    .then(y => piePag.innerHTML = y)
+                    .catch(err => console.log(err))
+            }
 
-    <script defer type="module">
+            loadHeader();
+            loadFooter();
 
-        fetch('/Blog/Includes/footer.html')
-            .then(respuesta => {
-                return respuesta.text();
-            })
-            .then(contenido => {
-                document.getElementById('footer').innerHTML = contenido;
-            })
-            .catch(error => { console.error('Error al enviar los datos', error) })
-
-    </script>
+        </script>
 </head>
 
 <body>
-    <header class="header">
-        <section class="contenedor">
-            <div class="barra">
-                <a class="logo no-margin centrar-texto" href="index.html">Liv. Lee.</a>
-                <nav class="navegacion">
-                    <a href="AcercaDemi.html" class="navegacion_enlace">Acerca de mi</a>
-                    <a href="Internet.html" class="navegacion_enlace">Cosas de internet</a>
-                    <a href="CV" class="navegacion_enlace">CV</a>
-                </nav>
-            </div>
-        </section>
-        <section class="header-texto">
-            <h1 class="no-margin">L. O. BLOG</h1>
-            <p>Bienvenidx</p>
-        </section>
-    </header>
-
+   <div id="lacabeza"></div>
     <main class="contenedor">
         <img src="/Blog/imagenes/e5.png" alt="PrimeraImagen">
         <h3 class="centrar-texto"> Retrospectiva de una ingeniera </h3>
@@ -234,10 +225,8 @@
 
     </main>
 
+    <footer id="elpie"></footer>
 
-    <div id="footer">
-
-    </div>
 </body>
 
 </html>
